@@ -7,6 +7,12 @@ dist/
 **/dist/
 build/
 *.tsbuildinfo
+.next/
+**/.next/
+out/
+**/out/
+next-env.d.ts
+**/next-env.d.ts
 
 # Local databases & runtime data
 *.db

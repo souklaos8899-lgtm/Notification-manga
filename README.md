@@ -48,8 +48,9 @@ notification-manga/
 │   │   ├── scraper/         # Hybrid URL Fetcher & Smart HTML Chapter Extractor
 │   │   └── security/        # Socket-level SSRF Guard & Security Headers
 │   └── tests/               # 40 Automated Unit, Integration & Security Tests (Vitest)
-└── frontend/                # React + TypeScript + Vite + Tailwind CSS Dashboard
+└── frontend/                # Next.js (App Router) + TypeScript + Tailwind CSS Dashboard
     └── src/
+        ├── app/             # Next.js App Router (layout.tsx, page.tsx)
         ├── api/             # Typed API Boundary Client
         ├── components/      # Dashboard, MangaCard, AddMangaModal, NotificationChannelsModal
         └── utils/           # Browser Notification & URL Sanitizer
@@ -74,11 +75,11 @@ cd ../frontend && npm install
 # Terminal 1: รัน Backend API & Background Scheduler (พอร์ต 4000)
 npm run dev:backend
 
-# Terminal 2: รัน Frontend Web App (พอร์ต 5173)
+# Terminal 2: รัน Frontend Next.js App Router (พอร์ต 3000)
 npm run dev:frontend
 ```
 
-จากนั้นเปิดเบราว์เซอร์ไปที่ `http://localhost:5173`
+จากนั้นเปิดเบราว์เซอร์ไปที่ `http://localhost:3000`
 - ในโหมดเริ่มต้น (**Personal Mode**) สามารถกดปุ่ม **"เข้าใช้งานโหมดส่วนตัว (1-Click Personal Access)"** เพื่อเข้าใช้งานได้ทันที (หรือล็อกอินด้วย `admin` / `admin123`)
 
 ### 3. รันการทดสอบและ Build (Verification)

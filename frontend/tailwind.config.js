@@ -1,8 +1,8 @@
 /** @type {import('tailwindcss').Config} */
 export default {
   content: [
-    "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}",
+    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   darkMode: 'class',
   theme: {
@@ -18,7 +18,7 @@ export default {
         },
       },
       fontFamily: {
-        sans: ['Inter', 'Sarabun', 'system-ui', 'sans-serif'],
+        sans: ['var(--font-kanit)', 'Inter', 'Sarabun', 'system-ui', 'sans-serif'],
       },
       boxShadow: {
         'glow-primary': '0 0 25px -5px rgba(99, 102, 241, 0.4)',
@@ -27,4 +27,4 @@ export default {
     },
   },
   plugins: [],
-}
+};

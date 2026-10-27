@@ -11,4 +11,7 @@ export const config = {
   cookieName: 'manga_token',
   dbPath: process.env.DB_PATH || path.resolve(process.cwd(), 'data', 'manga.db'),
   defaultCheckIntervalMinutes: parseInt(process.env.CHECK_INTERVAL_MINUTES || '60', 10),
+  corsOrigins: process.env.CORS_ORIGIN
+    ? process.env.CORS_ORIGIN.split(',').map((origin) => origin.trim())
+    : ['http://localhost:3000', 'http://localhost:5173'],
 };

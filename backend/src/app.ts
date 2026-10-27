@@ -1,6 +1,7 @@
 import cookieParser from 'cookie-parser';
 import cors from 'cors';
 import express, { Express, NextFunction, Request, Response } from 'express';
+import { config } from './config';
 import {
   handleGetMe,
   handleGetSettings,
@@ -75,7 +76,7 @@ export function createApp(): Express {
 
   app.use(
     cors({
-      origin: true,
+      origin: config.corsOrigins,
       credentials: true,
     })
   );
