@@ -15,7 +15,7 @@ describe('Security Audit & Defense Verification Tests', () => {
     const db = initDatabase(':memory:');
     createSchema(db);
     seedInitialData(db);
-    app = createApp();
+    app = await createApp();
 
     const adminLoginRes = await request(app)
       .post('/api/auth/quick-personal-login')

@@ -13,12 +13,12 @@ describe('Full API Lifecycle & Multi-User Isolation Tests', () => {
   let userBId: string;
   let createdMangaId: string;
 
-  beforeAll(() => {
+  beforeAll(async () => {
     // Initialize in-memory SQLite database
     const db = initDatabase(':memory:');
     createSchema(db);
     seedInitialData(db);
-    app = createApp();
+    app = await createApp();
   });
 
   it('checks health endpoint', async () => {

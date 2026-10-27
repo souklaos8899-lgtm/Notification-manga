@@ -38,16 +38,15 @@
 notification-manga/
 ├── shared/
 │   └── contract.ts          # Shared TypeScript Domain & API Contracts
-├── backend/                 # Express + TypeScript + SQLite (node:sqlite) + Scraper & Notifier
+├── backend/                 # NestJS (Modular Clean Architecture) + TypeScript + SQLite (node:sqlite)
 │   ├── src/
-│   │   ├── auth/            # JWT Auth, Personal Quick-Login & Rate Limiter
-│   │   ├── db/              # SQLite Database & Repositories
-│   │   ├── notifications/   # Telegram, Discord, LINE, Webhook Dispatchers
-│   │   ├── routes/          # REST API Endpoints
-│   │   ├── scheduler/       # Background Cron Polling Engine
-│   │   ├── scraper/         # Hybrid URL Fetcher & Smart HTML Chapter Extractor
-│   │   └── security/        # Socket-level SSRF Guard & Security Headers
-│   └── tests/               # 40 Automated Unit, Integration & Security Tests (Vitest)
+│   │   ├── main.ts          # NestJS Bootstrap & Server Entry
+│   │   ├── app.module.ts    # Root NestJS Application Module
+│   │   ├── common/          # Auth/Admin/RateLimit Guards & Exception Filters
+│   │   ├── db/              # SQLite Database, Schema & Seed
+│   │   ├── security/        # Socket-level SSRF Guard
+│   │   └── modules/         # Feature Modules (auth, manga, scraper, channels, notifications, scheduler)
+│   └── tests/               # 40 Automated Unit, Integration & Security Tests (Vitest + Supertest)
 └── frontend/                # Next.js (App Router) + TypeScript + Tailwind CSS Dashboard
     └── src/
         ├── app/             # Next.js App Router (layout.tsx, page.tsx)

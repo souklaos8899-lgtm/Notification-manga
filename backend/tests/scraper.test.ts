@@ -3,8 +3,8 @@ import {
   cleanTitle,
   extractMangaInfoFromHtml,
   parseChapterNumber,
-} from '../src/scraper/htmlExtractor';
-import { generateDemoHtml, parseDemoUrl } from '../src/scraper/mockDemoServer';
+} from '../src/modules/scraper/htmlExtractor';
+import { generateDemoHtml, parseDemoUrl } from '../src/modules/scraper/mockDemoServer';
 
 describe('Scraper & HTML Extractor Tests', () => {
   it('correctly parses chapter numbers from various formats', () => {
