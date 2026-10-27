@@ -1,0 +1,14 @@
+{
+  "name": "notification-manga-workspace",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Smart Manga Update Tracker & Multi-Channel Chat Notification System (URL-based, Personal & Public ready)",
+  "scripts": {
+    "build:backend": "npm --prefix backend run build",
+    "build:frontend": "npm --prefix frontend run build",
+    "build": "npm run build:backend && npm run build:frontend",
+    "test:backend": "npm --prefix backend test",
+    "dev:backend": "npm --prefix backend run dev",
+    "dev:frontend": "npm --prefix frontend run dev"
+  }
+}
